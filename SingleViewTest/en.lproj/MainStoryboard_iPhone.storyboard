@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amg-11-rUw">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="About...">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="07Q-6W-CXW" kind="modal" id="vqv-GT-nd8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="1JE-cg-Dll">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="352" id="PxQ-NQ-wX5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1D-Ea-W1P">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start capture">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startCapturePressed:" destination="2" eventType="touchUpInside" id="1Ws-go-IUE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="V1D-Ea-W1P" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="79p-KQ-EIU"/>
+                            <constraint firstItem="V1D-Ea-W1P" firstAttribute="leading" secondItem="1JE-cg-Dll" secondAttribute="leading" type="default" id="URy-KE-1Ld"/>
+                            <constraint firstAttribute="trailing" secondItem="Amg-11-rUw" secondAttribute="trailing" constant="16" id="aVn-JZ-BBN"/>
+                            <constraint firstItem="Amg-11-rUw" firstAttribute="trailing" secondItem="1JE-cg-Dll" secondAttribute="trailing" type="default" id="kOz-s1-Vje"/>
+                            <constraint firstItem="1JE-cg-Dll" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mtv-jd-ttg"/>
+                            <constraint firstAttribute="bottom" secondItem="Amg-11-rUw" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="p3g-uF-Y8l"/>
+                            <constraint firstItem="1JE-cg-Dll" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="wva-Ii-0jU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0kf-i1-2bM"/>
+                    <connections>
+                        <outlet property="startCaptureButton" destination="V1D-Ea-W1P" id="chR-Cg-eLH"/>
+                        <outlet property="videoView" destination="1JE-cg-Dll" id="ubJ-b8-18r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="71"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2QI-Jr-mka">
+            <objects>
+                <viewController id="07Q-6W-CXW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5GA-6V-U5m">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkM-v6-n0a">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2" kind="modal" modalTransitionStyle="crossDissolve" id="a8o-Q1-aAS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hKA-ze-Rkh">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="YW7-14-0mM"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="This is a test application by uavster to detect faces with OpenCV.">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hKA-ze-Rkh" firstAttribute="top" secondItem="5GA-6V-U5m" secondAttribute="top" constant="95" id="Sv1-xw-x0I"/>
+                            <constraint firstAttribute="bottom" secondItem="UkM-v6-n0a" secondAttribute="bottom" constant="77" id="W5p-6D-8dr"/>
+                            <constraint firstItem="hKA-ze-Rkh" firstAttribute="leading" secondItem="5GA-6V-U5m" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Xa3-PD-upM"/>
+                            <constraint firstItem="hKA-ze-Rkh" firstAttribute="centerX" secondItem="UkM-v6-n0a" secondAttribute="centerX" type="default" id="owV-Gp-NeO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUk-i6-Z0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="71"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="startCapturePressed:"/>
+                <relationship kind="outlet" name="startCaptureButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="videoView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
